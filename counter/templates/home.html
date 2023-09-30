@@ -27,7 +27,7 @@
                     </div>
                 </form>
                 {% if api %}
-                {% if api == 'oops! there is something wrong'%}
+                {% if api == 'oops! there is something wrong' %}
                 <div class="alert alert-warning"> Oh no! something went wrong.Please try again in sometime. </div>
                 {% else %}
                 <h1> {{api.0.name | capfirst}} has a total of <strong> {{ api.0.calories }} Calories</strong>
@@ -116,7 +116,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-md-12" >
+                        <div >
                             <canvas id="myChart"></canvas>
                         </div>
                     </div>
@@ -146,23 +146,35 @@
                       {{ api.0.sugar_g }},
                       ],
                       backgroundColor: [
-                      'rgba(67, 245, 39, 0.8)',
-                      'rgba(39, 245, 226, 0.8)',
-                      'rgba(39, 54, 245, 0.8)',
-                      'rgba(157, 39, 245, 0.8)',
-                      'rgba(245, 39, 97, 0.8)',
-                      'rgba(245, 238, 39, 0.8)',
-                      'rgba(4, 146, 14, 0.8)',
-                      'rgba(4, 97, 146, 0.8)',
-                      'rgba(146, 70, 4, 0.8)',
-                      'rgba(61, 62, 67, 0.8)',
+                      'rgba(67, 245, 39, 0.3)',
+                      'rgba(39, 245, 226, 0.3)',
+                      'rgba(39, 54, 245, 0.3)',
+                      'rgba(157, 39, 245, 0.3)',
+                      'rgba(245, 39, 97, 0.3)',
+                      'rgba(245, 238, 39, 0.3)',
+                      'rgba(4, 146, 14, 0.3)',
+                      'rgba(4, 97, 146, 0.3)',
+                      'rgba(146, 70, 4, 0.3)',
+                      'rgba(61, 62, 67, 0.3)',
+                      ],
+                      borderColor: [
+                      'rgba(67, 245, 39, 1)',
+                      'rgba(39, 245, 226, 1)',
+                      'rgba(39, 54, 245, 1)',
+                      'rgba(157, 39, 245, 1)',
+                      'rgba(245, 39, 97, 1)',
+                      'rgba(245, 238, 39, 1)',
+                      'rgba(4, 146, 14, 1)',
+                      'rgba(4, 97, 146, 1)',
+                      'rgba(146, 70, 4, 1)',
+                      'rgba(61, 62, 67, 1)',
                       ],
                       borderWidth: 1
                     }]
                   },
                   options: {
                     responsive : true,
-                    maintainAspectRatio : false,
+                    {% comment %} maintainAspectRatio : false, {% endcomment %}
                     scales: {
                       y: {
                         beginAtZero: true
